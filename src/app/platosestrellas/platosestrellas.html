@@ -1,0 +1,32 @@
+<section>
+
+
+  <div class="marco">
+    <h2 class="titulo mb-3">COMIDA ESTRELLA</h2>
+    
+    <img [src]="platoEstrella.imagen" [alt]="platoEstrella.nombre" class="img">
+    
+    <h3>{{ platoEstrella.nombre }}</h3>
+    
+    <p class="descripcion">
+      <strong>Ingredientes:</strong> {{ platoEstrella.ingredientes }}
+    </p>
+
+    <p class="precio">${{ platoEstrella.precio }} </p>
+  </div>
+
+  <div class="marco">
+    <h2 class="titulo mb-3">BEBIDA ESTRELLA</h2>
+    
+    <img [src]="bebidaEstrella.imagen" [alt]="bebidaEstrella.nombre" class="img">
+    
+    <h3>{{ bebidaEstrella.nombre }}</h3>
+    
+    <p class="descripcion">
+      <strong>Ingredientes:</strong> {{ bebidaEstrella.ingredientes }}
+    </p>
+
+    <p class="precio">${{ bebidaEstrella.precio }} </p>
+  </div>
+
+</section>

@@ -1,0 +1,15 @@
+<section>
+    <h1>Comidas</h1>
+
+    <div>
+        <label for="buscarNombre">Buscar por nombre:</label>
+        <input id="buscarNombre" type="text" [(ngModel)]="nombreBusqueda" placeholder="Ej: pollo">
+        <button type="button" (click)="buscarPorNombre()">Buscar</button>
+    </div>
+
+    <div>
+        <label for="buscarIngrediente">Buscar por ingrediente:</label>
+        <input id="buscarIngrediente" type="text" [(ngModel)]="ingredienteBusqueda" placeholder="Ej: ajo">
+        <button type="button" (click)="buscarPorIngrediente()">Buscar</button>
+    </div>
+</section>

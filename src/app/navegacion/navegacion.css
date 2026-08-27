@@ -1,0 +1,43 @@
+section {
+    background-color: #5A111E; 
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 70px;
+    width: 100x;
+    object-fit: contain;
+}
+
+.nombre {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #FFFFFF; 
+    font-weight: 600;
+    font-size: 0.95rem;
+    background-color: transparent;
+    padding: 6px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    background-color: #000000;
+    color: #FFFFFF;
+}

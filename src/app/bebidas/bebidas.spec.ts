@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BebidasComponent } from './bebidas';
+
+describe('BebidasComponent', () => {
+  let component: BebidasComponent;
+  let fixture: ComponentFixture<BebidasComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [BebidasComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(BebidasComponent);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

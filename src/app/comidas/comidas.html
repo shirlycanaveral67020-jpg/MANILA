@@ -1,0 +1,51 @@
+<section class="contenedor-comidas">
+
+  <app-busquedacomida (resultados)="procesarResultados($event)"></app-busquedacomida>
+
+  <div class="lista-tarjetas">
+    @for (plato of datosApi; track plato.idMeal) {
+      <div class="marco">
+        <img [src]="plato.strMealThumb" [alt]="plato.strMeal" class="img">
+
+        <div class="info">
+          <h3>{{ plato.strMeal }}</h3>
+          <p class="descripcion">Categoría: {{ plato.strCategory || 'Comida' }}</p>
+
+          <p class="descripcion">
+            Ingredientes: {{ plato.ingredientesTexto }}
+          </p>
+
+          <p class="precio">${{ plato.precio | number }}</p>
+
+          <div class="pedido">
+            <button class="btn" (click)="restarCantidad(plato)">-</button>
+            <span class="num">{{ plato.cantidad }}</span>
+            <button class="btn" (click)="sumarCantidad(plato)">+</button>
+            
+            <button class="btn-agregar" (click)="agregarAlPedido(plato)">
+              Agregar al Pedido
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+ 
+  @if (mensaje) {
+    <div class="modal-overlay" (click)="mensaje = ''">
+      <div class="modal-contenido" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          <span> Comida Agregada</span>
+          <button class="btn-cerrar-x" (click)="mensaje = ''">✕</button>
+        </div>
+        <div class="modal-body">
+          <p>{{ mensaje }}</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-modal-aceptar" (click)="mensaje = ''">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  }
+</section>

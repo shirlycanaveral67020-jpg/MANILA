@@ -1,0 +1,110 @@
+<section class="contenedor-principal">
+
+
+  @if (!modoFactura) {
+    <div class="contenedor-pedido">
+      <h2>Tu Pedido - Restaurante Manila</h2>
+
+      <div class="contenido-grid" *ngIf="items.length > 0; else pedidoVacio">
+      
+        <div class="resumen-lista">
+          <h3>Productos Elegidos</h3>
+          @for (item of items; track item.id) {
+            <div class="item-card">
+              <img [src]="item.imagen" [alt]="item.nombre" class="thumb">
+              <div class="info-item">
+                <h4>{{ item.nombre }}</h4>
+                <p class="precio-unitario">Precio: ${{ item.precio | number }}</p>
+                <p class="subtotal">Subtotal: ${{ (item.precio * item.cantidad) | number }}</p>
+              </div>
+              <div class="controles">
+                <button class="btn-cant" (click)="restarCantidad(item)">-</button>
+                <span>{{ item.cantidad }}</span>
+                <button class="btn-cant" (click)="sumarCantidad(item)">+</button>
+                <button class="btn-eliminar" (click)="eliminarProducto(item.id)">
+                   Eliminar
+                </button>
+              </div>
+            </div>
+          }
+
+          <div class="total-box">
+            <h3>Total A Pagar: ${{ obtenerTotal() | number }}</h3>
+          </div>
+        </div>
+
+        <div class="formulario-cliente">
+          <h3>Datos de Envío</h3>
+          <form (ngSubmit)="generarFactura()">
+            <div class="campo">
+              <label>Nombre Completo *</label>
+              <input type="text" [(ngModel)]="cliente.nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+            </div>
+
+            <div class="campo">
+              <label>Teléfono *</label>
+              <input type="tel" [(ngModel)]="cliente.telefono" name="telefono" placeholder="Ej: 300 123 4567" required>
+            </div>
+
+            <div class="campo">
+              <label>Dirección de Entrega *</label>
+              <input type="text" [(ngModel)]="cliente.direccion" name="direccion" placeholder="Ej: Calle 10 # 5-20" required>
+            </div>
+
+            <div class="campo">
+              <label>Método de Pago</label>
+              <select [(ngModel)]="cliente.metodoPago" name="metodoPago">
+                <option value="Efectivo">Efectivo</option>
+                <option value="Transferencia / Nequi">Transferencia / Nequi</option>
+                <option value="Tarjeta de Crédito/Débito">Tarjeta de Crédito/Débito</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label>Observaciones</label>
+              <textarea [(ngModel)]="cliente.observaciones" name="observaciones" rows="3" placeholder="Ej: Sin cebolla..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-confirmar">Generar Factura de Venta</button>
+          </form>
+        </div>
+      </div>
+
+      <ng-template #pedidoVacio>
+        <div class="vacio-box">
+          <p>Aún no has agregado nada al pedido.</p>
+        </div>
+      </ng-template>
+    </div>
+  }
+
+  @if (modoFactura) {
+    <app-factura
+      [items]="items"
+      [cliente]="cliente"
+      [numeroFactura]="numeroFactura"
+      [fechaActual]="fechaActual"
+      [total]="obtenerTotal()"
+      (volver)="volverAlPedido()">
+    </app-factura>
+  }
+
+
+  @if (mostrarModal) {
+    <div class="modal-overlay" (click)="cerrarModal()">
+      <div class="modal-contenido" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          
+          <button class="btn-cerrar-x" (click)="cerrarModal()">✕</button>
+        </div>
+        <div class="modal-body">
+          <p>{{ mensajeModal }}</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-modal-aceptar" (click)="cerrarModal()">Entendido</button>
+        </div>
+      </div>
+    </div>
+  }
+
+</section>

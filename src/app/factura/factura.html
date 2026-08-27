@@ -1,0 +1,88 @@
+<div class="hoja-factura">
+  
+  
+  <div class="header-factura-manila">
+    <div class="brand-info">
+      <div class="logo-factura-contenedor">
+        <img src="https://static.vecteezy.com/system/resources/previews/024/284/717/non_2x/restaurant-logo-4-free-png.png" alt="Logo Manila" class="img-logo-factura">
+        <div>
+          <h1 class="marca-titulo">MANILA</h1>
+          <p class="marca-sub">Restaurante & Experiencia Gastronómica</p>
+        </div>
+      </div>
+    </div>
+    <div class="factura-tag">
+      FACTURA DE VENTA
+    </div>
+  </div>
+
+
+  <div class="bloque-datos">
+    <div class="datos-cliente">
+      <span class="subtitulo-seccion">FACTURAR A</span>
+      <p class="nombre-cliente">{{ cliente.nombre }}</p>
+      <p><strong>Teléfono:</strong> {{ cliente.telefono }}</p>
+      <p><strong>Dirección:</strong> {{ cliente.direccion }}</p>
+    </div>
+
+    <div class="datos-recibo">
+      <p><strong>N° FACTURA:</strong> MAN-00{{ numeroFactura }}</p>
+      <p><strong>FECHA:</strong> {{ fechaActual }}</p>
+      <p><strong>MÉTODO DE PAGO:</strong> {{ cliente.metodoPago }}</p>
+    </div>
+  </div>
+
+
+  <table class="tabla-manila">
+    <thead>
+      <tr>
+        <th class="col-center">#</th>
+        <th>DESCRIPCIÓN</th>
+        <th class="col-num">PRECIO</th>
+        <th class="col-center">CANT.</th>
+        <th class="col-num">TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of items; track item.id; let i = $index) {
+        <tr>
+          <td class="col-center">{{ i + 1 }}</td>
+          <td class="item-nombre">{{ item.nombre }}</td>
+          <td class="col-num">${{ item.precio | number }}</td>
+          <td class="col-center">{{ item.cantidad }}</td>
+          <td class="col-num font-bold">${{ (item.precio * item.cantidad) | number }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+
+  <div class="pie-factura-bloque">
+    <div class="notas-manila">
+      <p class="agradecimiento">¡Gracias por elegir Restaurante Manila!</p>
+      <p class="detalles-nit">NIT: 900.123.456-7 | Régimen Común</p>
+      <p class="observacion-texto" *ngIf="cliente.observaciones"><strong>Notas del pedido:</strong> {{ cliente.observaciones }}</p>
+    </div>
+
+    <div class="resumen-totales">
+      <div class="fila-calculo">
+        <span>Subtotal:</span>
+        <span>${{ total | number }}</span>
+      </div>
+      <div class="fila-calculo">
+        <span>Impuestos (0%):</span>
+        <span>$0</span>
+      </div>
+      <div class="caja-total-manila">
+        <span>TOTAL:</span>
+        <span>${{ total | number }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-contacto">
+    Restaurante Manila — Servicio al cliente: +57 319 758 1287 | www.restaurantemanila.com
+  </div>
+
+  <button class="btn-volver no-imprimir" (click)="regresar()"> Volver al Pedido</button>
+</div>

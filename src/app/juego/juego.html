@@ -1,0 +1,47 @@
+<section class="contenedor-juego">
+  <div class="encabezado-juego">
+    <h2>Juego</h2>
+    <p class="subtitulo">Encuentra la pareja que es  la COMIDA y BEBIDA</p>
+  </div>
+
+
+  <div class="tablero-grid">
+    @for (carta of cartas; track carta.id) {
+      <div 
+        class="carta" 
+        [class.revelada]="carta.revelada" 
+        [class.encontrada]="carta.encontrada"
+        (click)="seleccionarCarta(carta)">
+        
+        
+        <div class="cara frontal"></div>
+
+        <!-- Cara Trasera (Restaurantes / Comida / Bebida) -->
+        <div class="cara trasera">
+          <img [src]="carta.imagen" [alt]="carta.tipo">
+        </div>
+      </div>
+    }
+  </div>
+
+  <button class="btn-reiniciar" (click)="iniciarJuego()">Mezclar y Reiniciar</button>
+
+  
+  @if (mostrarModalGanador) {
+    <div class="modal-overlay">
+      <div class="modal-contenido">
+        <div class="modal-header">
+          <h3>FELICITACIONES</h3>
+        </div>
+        <div class="modal-body">
+          
+          <h3>¡Encontraste la Comida y la Bebida!</h3>
+          
+        </div>
+        <div class="modal-footer">
+          <button class="btn-modal-aceptar" (click)="cerrarModalYReiniciar()">Jugar de Nuevo</button>
+        </div>
+      </div>
+    </div>
+  }
+</section>

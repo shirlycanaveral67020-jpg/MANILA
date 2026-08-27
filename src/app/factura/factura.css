@@ -1,0 +1,189 @@
+.invoice-sheet {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.header-factura-manila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #5c1421;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.logo-factura-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.img-logo-factura {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+
+.marca-titulo {
+  color: #5c1421;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.marca-sub {
+  color: #666;
+  font-size: 13px;
+  margin: 2px 0 0 0;
+}
+
+.factura-tag {
+  color: #5c1421;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.bloque-datos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.subtitulo-seccion {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5c1421;
+  letter-spacing: 1px;
+}
+
+.nombre-cliente {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin: 4px 0 8px 0;
+}
+
+.datos-cliente p, .datos-recibo p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+.datos-recibo {
+  text-align: right;
+}
+
+.tabla-manila {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.tabla-manila th {
+  background-color: #5c1421;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.tabla-manila td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
+}
+
+.col-center { text-align: center; }
+.col-num { text-align: right; }
+.font-bold { font-weight: bold; }
+.item-nombre { font-weight: 600; color: #222; }
+
+.pie-factura-bloque {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.notas-manila {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.agradecimiento {
+  font-weight: 700;
+  color: #5c1421;
+  margin: 0 0 5px 0;
+}
+
+.detalles-nit {
+  font-size: 12px;
+  color: #777;
+  margin: 0 0 10px 0;
+}
+
+.observacion-texto {
+  font-size: 13px;
+  background: #f9f9f9;
+  padding: 8px;
+  border-left: 3px solid #5c1421;
+}
+
+.resumen-totales {
+  width: 240px;
+}
+
+.fila-calculo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.caja-total-manila {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5c1421;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.footer-contacto {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 25px;
+}
+
+.btn-volver {
+  display: block;
+  margin: 20px auto 0 auto;
+  background: #5c1421;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Adaptación responsive */
+@media (max-width: 600px) {
+  .hoja-factura { padding: 15px; margin: 10px; box-shadow: none; }
+  .header-factura-manila { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .bloque-datos, .pie-factura-bloque { flex-direction: column; gap: 15px; }
+  .datos-recibo { text-align: left; }
+  .resumen-totales { width: 100%; }
+}

@@ -1,0 +1,31 @@
+<section>
+    <h1>Bebidas</h1>
+
+    <div>
+        <label for="buscarNombre">Buscar por nombre:</label>
+        <input id="buscarNombre" type="text" [(ngModel)]="nombreBusqueda" placeholder="Ej: margarita">
+        <button type="button" (click)="buscarPorNombre()">Buscar</button>
+    </div>
+
+    <div>
+        <label for="buscarIngrediente">Buscar por ingrediente:</label>
+        <input id="buscarIngrediente" type="text" [(ngModel)]="ingredienteBusqueda" placeholder="Ej: vodka">
+        <button type="button" (click)="buscarPorIngrediente()">Buscar</button>
+    </div>
+
+    <div>
+        <label for="selectTipo">Tipo de bebida:</label>
+        <select id="selectTipo" [(ngModel)]="tipoSeleccionado" (change)="filtrarPorTipo()">
+            <option value="Todos">Todos</option>
+            <option value="Alcoholic">Alcoholica</option>
+            <option value="Non_Alcoholic">No alcoholicas</option>
+        </select>
+
+        <label for="selectCategoria">Categoría:</label>
+        <select id="selectCategoria" [(ngModel)]="categoriaSeleccionada" (change)="filtrarPorCategoria()">
+            <option value="Todas">Todas</option>
+            <option value="Ordinary_Drink">Bebida Ordinaria</option>
+            <option value="Cocktail">Coctel</option>
+        </select>
+    </div>
+</section>

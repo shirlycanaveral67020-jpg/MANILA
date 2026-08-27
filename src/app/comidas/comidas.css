@@ -1,0 +1,178 @@
+section {
+  padding: 40px;
+  text-align: center;
+  background-color: #181616;
+}
+
+.titulo {
+  color: #D32F2F;
+  font-weight: bold;
+}
+
+.marco {
+  border: 4px solid #332222;
+  background-color: #242020; 
+  border-radius: 16px; 
+  padding: 20px; 
+  width: 90%; 
+  height: auto;
+  margin: 40px auto; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.img {
+  width: 320px; 
+  height: 220px; 
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #332222; 
+}
+
+.info {
+  flex: 1; 
+  text-align: center; 
+}
+
+h3 {
+  font-weight: bold;
+  color: #F5F5F5;
+  margin-bottom: 6px;
+}
+
+.descripcion {
+  color: #B0A8A8;
+  margin-bottom: 8px;
+}
+
+.precio {
+  color: #FF5252;
+  font-weight: bold;
+}
+
+.pedido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.btn {
+  background-color: #5A111E;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.num {
+  color: white;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+
+.btn-agregar {
+  background-color: #5A111E;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .marco {
+    flex-direction: column; 
+    height: auto;
+    gap: 15px;
+  }
+
+  .img {
+    width: 100%; 
+    max-width: 320px;
+    height: 200px;
+  }
+
+  .info {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ========================================== */
+/* ESTILOS DEL MODAL EN COMIDAS              */
+/* ========================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-contenido {
+  background: #242020;
+  border: 2px solid #332222;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.modal-header {
+  background-color: #5A111E;
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.btn-cerrar-x {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+  font-size: 16px;
+  color: #F5F5F5;
+  text-align: center;
+}
+
+.modal-footer {
+  padding: 12px 20px 18px 20px;
+  text-align: center;
+}
+
+.btn-modal-aceptar {
+  background-color: #5A111E;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-modal-aceptar:hover {
+  background-color: #7A1C2C;
+}

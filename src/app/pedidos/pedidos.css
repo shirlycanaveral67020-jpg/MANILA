@@ -1,0 +1,151 @@
+
+.contenedor-pedido {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #d8d8d8;
+  border-radius: 12px;
+  color: #000;
+}
+
+.contenedor-pedido h2 {
+  text-align: center;
+  background-color: #5c1421;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.contenido-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.resumen-lista {
+  flex: 1;
+  min-width: 320px;
+}
+
+.resumen-lista h3, .formulario-cliente h3 {
+  color: #5c1421;
+  border-bottom: 2px solid #5c1421;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.item-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 15px;
+}
+
+.info-item {
+  flex: 1;
+}
+
+.info-item h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.subtotal {
+  font-weight: bold;
+  color: #5c1421;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-cant {
+  background: #5c1421;
+  color: white;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-eliminar {
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.total-box {
+  background: #5c1421;
+  color: white;
+  text-align: right;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.total-box h3 {
+  margin: 0;
+  color: white;
+}
+
+.formulario-cliente {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.campo label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.campo input, .campo select, .campo textarea {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-confirmar {
+  width: 100%;
+  background: #5c1421;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.vacio-box {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}

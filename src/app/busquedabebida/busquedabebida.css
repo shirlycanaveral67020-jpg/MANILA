@@ -1,0 +1,64 @@
+h1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 30px;
+    margin-bottom: 0;
+    background-color: #5A111E;
+    height: 80px;
+    line-height: 80px;
+}
+section {
+    background-color: #b0afaf;
+    width: 95%;
+    margin: 30px auto;
+    height: auto;
+    border: 2px solid #5A111E;
+    border-radius: 16px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+div {
+    margin: 18px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+label {
+    color: #1A1A1A;
+    font-weight: bold;
+}
+input, select {
+    padding: 10px 15px;
+    width: 220px;
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    border: 2px solid #5A111E;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+input::placeholder {
+    color: #777777;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #8C1C2B;
+}
+button {
+    padding: 10px 22px;
+    background-color: #5A111E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+button:hover {
+    background-color: #8C1C2B;
+}
+
+
