@@ -1,7 +1,7 @@
 <section class="contenedor-juego">
   <div class="encabezado-juego">
-    <h2>Juego</h2>
-    <p class="subtitulo">Encuentra la pareja que es  la COMIDA y BEBIDA</p>
+    <h2>Encuentra la comida y la bebida</h2>
+   
   </div>
 
 
@@ -15,17 +15,13 @@
         
         
         <div class="cara frontal"></div>
-
-        <!-- Cara Trasera (Restaurantes / Comida / Bebida) -->
         <div class="cara trasera">
           <img [src]="carta.imagen" [alt]="carta.tipo">
         </div>
       </div>
     }
   </div>
-
   <button class="btn-reiniciar" (click)="iniciarJuego()">Mezclar y Reiniciar</button>
-
   
   @if (mostrarModalGanador) {
     <div class="modal-overlay">

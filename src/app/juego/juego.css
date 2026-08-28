@@ -6,17 +6,9 @@
 
 .encabezado-juego h2 {
   font-size: 2rem;
-  color: #f8c291;
-  margin-bottom: 5px;
+  color: #010100;
+  margin-bottom: 0;
 }
-
-.subtitulo {
-  color: #ddd;
-  font-size: 15px;
-  margin-bottom: 25px;
-}
-
-/* GRIDS MATRIZ 4X4 */
 .tablero-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -40,14 +32,14 @@
   border-color: #e74c3c;
 }
 
-/* CARA FRONTAL: EL MISMO COLOR OSCURO/VINO TINTO SIN NADA ADENTRO */
+
 .cara.frontal {
   width: 100%;
   height: 100%;
   background-color: #2b1115;
 }
 
-/* CARA TRASERA (FOTOS DE RESTAURANTE O COMIDA/BEBIDA) */
+
 .carta .trasera {
   display: none;
   width: 100%;
