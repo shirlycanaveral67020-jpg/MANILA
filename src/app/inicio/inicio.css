@@ -1,24 +1,29 @@
-.carousel-item {
-  height: 500px; 
-}
-
-.carousel-inner img {
+/* --- COMPUTER CAROUSEL STYLES --- */
+.carousel-inner .carousel-item img {
   width: 100%;
-  height: 100%;
-
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
 }
-@media (max-width: 768px) {
-  
-  .carousel-inner, 
+
+/* --- SOLUCIÓN PARA CELULARES (Menos de 768px) --- */
+@media screen and (max-width: 768px) {
+  /* 1. Forzamos la altura máxima del contenedor en móviles */
+  .carousel,
+  .carousel-inner,
   .carousel-item {
-    height: 220px !important; 
-    
+    height: 220px !important;
+    max-height: 220px !important;
+    min-height: 220px !important;
+    overflow: hidden;
   }
 
-  .carousel-inner img {
+  /* 2. Forzamos a la imagen a adaptarse a esa altura exacta */
+  .carousel-inner .carousel-item img {
     width: 100% !important;
-    height: 60% !important;
-    object-fit: cover !important;
+    height: 100% !important;
+    max-height: 220px !important;
+    object-fit: cover !important; /* Mantiene la proporción cortando bordes, NUNCA estirando */
     object-position: center !important;
   }
 }
