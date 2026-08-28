@@ -5,13 +5,17 @@
 
 }
 @media (max-width: 768px) {
-  .carousel-inner img {
+  
+  .carousel-inner, 
+  .carousel-item {
+    height: 220px !important; 
+    max-height: 220px !important;
+  }
 
-    height: auto ;   
-    aspect-ratio: 16 / 9;      
-   
-    
-    object-fit: cover;        
-    object-position: center;   
+  .carousel-inner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
   }
 }
