@@ -35,7 +35,7 @@ export class ComidasComponent implements OnInit {
   }
 
   procesarResultados(lista: any) {
-    // Si la lista no existe, viene null o está vacía, limpia la pantalla y no rompe
+    
     if (!lista || !Array.isArray(lista) || lista.length === 0) {
       this.datosApi = [];
       this.cd.detectChanges();
