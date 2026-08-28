@@ -1,28 +1,27 @@
-/* --- COMPUTER SETUP --- */
+
 .carousel-inner .carousel-item {
-  height: 500px; /* Controla la altura fija del carrusel en PC */
+  height: 500px; 
 }
 
 .carousel-img {
   height: 100% !important;
   width: 100% !important;
-  object-fit: cover !important;     /* Corta los bordes sin deformar la foto */
-  object-position: center !important; /* Centra el contenido de la imagen */
+  object-fit: cover !important;    
+  object-position: center !important;
 }
 
-/* --- ADAPTACIÓN DEFINITIVA PARA CELULARES (Menos de 768px) --- */
 @media screen and (max-width: 768px) {
   .carousel-inner .carousel-item {
-    height: 220px !important;    /* Reduce el contenedor en móviles */
+    height: 220px !important;    
     max-height: 220px !important;
   }
 
   .carousel-img {
-    height: 100% !important;     /* Obliga a la imagen a medir 220px */
-    object-fit: cover !important; /* Mantiene la proporción perfecta en pantalla pequeña */
+    height: 100% !important;     
+    object-fit: cover !important; 
   }
 
-  /* Ajuste opcional: reduce los textos flotantes para que no tapen la imagen en el celular */
+
   .carousel-caption h1 {
     font-size: 1.5rem !important;
   }
