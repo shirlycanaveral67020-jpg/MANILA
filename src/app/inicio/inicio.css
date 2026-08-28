@@ -4,10 +4,14 @@
      
 
 }
-
-
 @media (max-width: 768px) {
   .carousel-inner img {
-    height: 250px;       
+
+    height: auto ;   
+    aspect-ratio: 16 / 9;      
+   
+    
+    object-fit: cover;        
+    object-position: center;   
   }
 }
