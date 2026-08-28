@@ -21,12 +21,12 @@ export class BebidasService {
     return this.http.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + ingrediente);
   }
 
-  // Filtrar por Alcohol / No Alcohol
+ 
   obtenerPorTipo(tipo: string): Observable<any> {
     return this.http.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=' + tipo);
   }
 
-  // Filtrar por Categoría
+
   obtenerPorCategoria(categoria: string): Observable<any> {
     return this.http.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=' + categoria);
   }
