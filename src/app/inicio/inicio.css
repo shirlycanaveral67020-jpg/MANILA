@@ -1,32 +1,28 @@
-
+/* --- GENERAL STYLES AND COMPUTER --- */
 .carousel-inner .carousel-item {
-  height: 500px; 
+  height: 500px !important;
 }
 
 .carousel-img {
   height: 100% !important;
   width: 100% !important;
-  object-fit: cover !important;    
+  object-fit: cover !important;
   object-position: center !important;
 }
 
-@media screen and (max-width: 768px) {
-  .carousel-inner .carousel-item {
-    height: 220px !important;    
+
+@media (max-width: 768px) {
+  .carousel,
+  .carousel-inner,
+  .carousel-item {
+    height: 220px !important;
     max-height: 220px !important;
+    min-height: 220px !important;
   }
 
   .carousel-img {
-    height: 100% !important;     
-    object-fit: cover !important; 
-  }
-
-
-  .carousel-caption h1 {
-    font-size: 1.5rem !important;
-  }
-  
-  .carousel-caption p {
-    font-size: 0.9rem !important;
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
   }
 }
