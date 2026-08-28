@@ -1,29 +1,33 @@
-/* --- COMPUTER CAROUSEL STYLES --- */
-.carousel-inner .carousel-item img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  object-position: center;
+/* --- COMPUTER SETUP --- */
+.carousel-inner .carousel-item {
+  height: 500px; /* Controla la altura fija del carrusel en PC */
 }
 
-/* --- SOLUCIÓN PARA CELULARES (Menos de 768px) --- */
+.carousel-img {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;     /* Corta los bordes sin deformar la foto */
+  object-position: center !important; /* Centra el contenido de la imagen */
+}
+
+/* --- ADAPTACIÓN DEFINITIVA PARA CELULARES (Menos de 768px) --- */
 @media screen and (max-width: 768px) {
-  /* 1. Forzamos la altura máxima del contenedor en móviles */
-  .carousel,
-  .carousel-inner,
-  .carousel-item {
-    height: 220px !important;
+  .carousel-inner .carousel-item {
+    height: 220px !important;    /* Reduce el contenedor en móviles */
     max-height: 220px !important;
-    min-height: 220px !important;
-    overflow: hidden;
   }
 
-  /* 2. Forzamos a la imagen a adaptarse a esa altura exacta */
-  .carousel-inner .carousel-item img {
-    width: 100% !important;
-    height: 100% !important;
-    max-height: 220px !important;
-    object-fit: cover !important; /* Mantiene la proporción cortando bordes, NUNCA estirando */
-    object-position: center !important;
+  .carousel-img {
+    height: 100% !important;     /* Obliga a la imagen a medir 220px */
+    object-fit: cover !important; /* Mantiene la proporción perfecta en pantalla pequeña */
+  }
+
+  /* Ajuste opcional: reduce los textos flotantes para que no tapen la imagen en el celular */
+  .carousel-caption h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.9rem !important;
   }
 }
