@@ -43,11 +43,10 @@ imgsRestaurantes: string[] = [
     
     let plantillaCartas: Carta[] = [];
 
-    // Añadir pareja objetivo
     plantillaCartas.push({ id: 1, tipo: 'comida', imagen: this.imgComida, revelada: false, encontrada: false });
     plantillaCartas.push({ id: 2, tipo: 'bebida', imagen: this.imgBebida, revelada: false, encontrada: false });
 
-    // Resto de cartas de restaurante
+  
     for (let i = 3; i <= 16; i++) {
       const imgRestaurante = this.imgsRestaurantes[i % this.imgsRestaurantes.length];
       plantillaCartas.push({
@@ -59,7 +58,7 @@ imgsRestaurantes: string[] = [
       });
     }
 
-    // Mezclar casillas aleatoriamente
+    
     this.cartas = plantillaCartas.sort(() => Math.random() - 0.5);
     this.cd.detectChanges();
   }
